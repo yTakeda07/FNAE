@@ -56,3 +56,9 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
 }
+.modal img{
+    display: none;
+}
+.modal img:first-of-type {
+    display: block;
+}

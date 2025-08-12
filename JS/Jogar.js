@@ -21,6 +21,11 @@ const main = `
     <input type="button" value="C3" id="C3" onclick="verificarCamera(3)"><br>
     <input type="button" value="C4" id="C4" onclick="verificarCamera(4)"><br>
     <input type="button" value="C5" id="C5" onclick="verificarCamera(5)"><br>
+    <img src="../IMG/0.jpg" alt="Camera 1" id="CI1" class="cameras">
+    <img src="../IMG/7.jpg" alt="Camera 2" id="CI2" class="cameras">
+    <img src="../IMG/11.jpg" alt="Camera 3" id="CI3" class="cameras">
+    <img src="../IMG/15.jpg" alt="Camera 4" id="CI4" class="cameras">
+    <img src="../IMG/19.jpg" alt="Camera 5" id="CI5" class="cameras">
   </div>
 </div>
 `;
