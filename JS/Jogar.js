@@ -16,10 +16,11 @@ const main = `
 <input type="button" value="--" id="abrirCamera">
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <input type="button" value="C1"><br>
-    <input type="button" value="C2"><br>
-    <input type="button" value="C3"><br>
-    <button id="fecharCamera">Fechar</button>
+    <input type="button" value="C1" id="C1" onclick="verificarCamera(1)"><br>
+    <input type="button" value="C2" id="C2" onclick="verificarCamera(2)"><br>
+    <input type="button" value="C3" id="C3" onclick="verificarCamera(3)"><br>
+    <input type="button" value="C4" id="C4" onclick="verificarCamera(4)"><br>
+    <input type="button" value="C5" id="C5" onclick="verificarCamera(5)"><br>
   </div>
 </div>
 `;
@@ -46,8 +47,9 @@ document.body.appendChild(ScriptCamera);
 
 RNG();
 
-
-
+const verificarCamera = document.createElement("script");
+verificarCamera.src = "../JS/verificarCamera.js";
+document.body.appendChild(verificarCamera);
 
 });
 
