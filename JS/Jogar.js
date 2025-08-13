@@ -49,7 +49,7 @@ document.body.appendChild(ScriptCamera);
 // const ScriptRNG = document.createElement("script");
 // ScriptCamera.src = "../JS/RNG.js";
 // document.body.appendChild(ScriptRNG);
-
+// agora eu importo a função do RNG em vez de criar o elemento script.
 RNG();
 
 const verificarCamera = document.createElement("script");

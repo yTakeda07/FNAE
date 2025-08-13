@@ -4,11 +4,13 @@ export async function RNG() {
     let P1 = 0;
     let P2 = 0;
 
-    let D1 = 10;
-    let D2 = 10;
+    let D1 = 2 + 1;
+    let D2 = 1 + 1;
 
-    let TEMPO = 6 * 60; // segundos
-    let SEGUNDOS = 0;
+    let TH = 86; // tempo de cada rodada em segundos
+    let HM = 6;
+    let TEMPO = HM * TH; // tempo total do jogo em segundos
+    let HORAS = 0;
 
     const img1 = document.getElementsByTagName("img")[0];
     const img2 = document.getElementsByTagName("img")[1];
@@ -20,25 +22,37 @@ export async function RNG() {
     document.getElementById("valorA2").value = P2;
 
 
-    document.querySelector("header").innerHTML = '<div id="cronometro">Tempo: 0s</div>';
+    document.querySelector("header").innerHTML = '<div id="cronometro">12 AM</div><div id="noite">Noite: 1</div>';
 
     const timer = setInterval(() => {
-        SEGUNDOS++;
-        document.getElementById("cronometro").textContent = `Tempo: ${SEGUNDOS}s`;
+        HORAS++;
+        document.getElementById("cronometro").textContent = `${HORAS} AM`;
 
-        if (SEGUNDOS >= TEMPO) {
+        if (HORAS*TH >= TEMPO) {
             clearInterval(timer);
         }
-    }, 1000);
+    }, TH * 1000);
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    while (SEGUNDOS < TEMPO) {
-        await sleep(5000);
-        let NA1 = Number(Math.floor(Math.random() * 20) + 1);
-        let NA2 = Number(Math.floor(Math.random() * 20) + 1);
+    do{
+        await sleep(1000);
+            if(HORAS <6) {
+        await sleep(1000);
+            if(HORAS < 6){
+        await sleep(1000); 
+            if(HORAS < 6){
+        await sleep(1000); 
+            if(HORAS < 6){
+        await sleep(1000);
+            if(HORAS < 6){
+                
+            
+        
+        let NA1 = Number(Math.floor(Math.random() * 21) + 1);
+        let NA2 = Number(Math.floor(Math.random() * 21) + 1);
         console.log(NA1 + " " + NA2);
 
         if (NA1 < D1) {
@@ -102,10 +116,9 @@ export async function RNG() {
         }else{
             img5.src= "../IMG/19.jpg";
         }
+    }}}}
 
-
-        
-    }
+    }}while (HORAS*TH < TEMPO);
 
     alert("Terminou a noite");
 }
