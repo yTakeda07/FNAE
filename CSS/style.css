@@ -69,18 +69,11 @@ body{
     height: 100%;
 }
 
-#cameraContainer{
+#cameraContainer1{
       position: absolute;
       bottom: 10%;
       right: 5%;
-      
-      display:flex;
-      background-image: url("../IMG/mapa0.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      width: 287px;
-      height: 324px; 
-    z-index: 10;
+
     }
     .modal input[type="button"] {
       cursor: pointer;
@@ -93,38 +86,69 @@ body{
     input[type="button"]:hover {
       background-color: #2b2b2bcc;
     }
-    #C1{
+    #h1{
       position: relative;
       top: 75%;
-      left: 41%;
+      left: 44%;
     }
-        #C2{
+      #e2{
       position: relative;
       top: 87%;
-      left: 49%;
+      left: 53%;
     }
-        #C3{
+      #r3{
       position: relative;
       top:50%;
-      left: 63%;
+      left: 67%;
     }
-    #C4{
+    #e1{
       position: relative;
       top: 20%;
-      left: 23%;
+      left: 27%;
     }
-    #C5{
+    #r2{
       position: relative;
       top: 58%;
-      left: 13%;
+      left: 20%;
     }
-    #C6{
+    #r1{
       position: relative;
-      top: 2%;
-      left: 19%;
+      top: 5%;
+      left: 27%;
     }
-    #C7{
+    #s1{
       position: relative;
       top: 25%;
-      left: -50%;
+      left: -42%;
     }
+    #s2{
+      position: relative;
+      top: -1%;
+      left: -77%;
+    }
+#NM_CAMERA{
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(0, 0, 0);
+  font-size: 150%;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+#cameraIMG{
+        display:flex;
+      background-image: url("../IMG/mapa0.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 287px;
+      height: 324px; 
+      z-index: 10;
+}
+#NM_SALA{
+  color: rgb(0, 0, 0);
+  font-size: 140%;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}

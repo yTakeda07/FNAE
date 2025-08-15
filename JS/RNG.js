@@ -1,6 +1,7 @@
+import { SALAS, SALASM } from './salas.js';
+
 export async function RNG() {
-    
-    
+
     let P1 = 0;
     let P2 = 0;
 

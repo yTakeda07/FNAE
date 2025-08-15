@@ -1,75 +1,46 @@
 function verificarCamera(cameraId) {
-    
+
 let valorA1 = document.getElementById("valorA1").value;
 let valorA2 = document.getElementById("valorA2").value;
 const img = document.querySelector(".modal img");
-NcameraId = parseInt(cameraId);
+let NM_SALA;
 
-for (let i = 0; i <= 4; i++) {
+switch (cameraId) {
+    case "H1":
+     NM_SALA = "HORTA";            
+        break;
+    case "E2":
+     NM_SALA = "ESCADA 2";            
+        break;
+    case "R3":
+     NM_SALA = "REFEITÓRIO 3";            
+        break;
+    case "E1":
+     NM_SALA = "ESCADA 1";            
+        break;
+    case "R2":
+     NM_SALA = "REFEITÓRIO 2";            
+        break;
+    case "R1":
+     NM_SALA = "REFEITÓRIO 1";            
+        break;
+    case "S1":
+     NM_SALA = "SECRETÁRIA 1";            
+        break;
+    case "S2":
+     NM_SALA = "SECRETÁRIA 2";            
+        break;
+    case "E1":
+     NM_SALA = "HORTA";            
+        break;
+    default:
+        break;
+}
+
+for (let i = 0; i <=7 ; i++) {
 document.getElementsByClassName("cameras")[i].style.display = "none";
 }
-document.getElementById("CI"+NcameraId).style.display = "flex";
-
-
-
-// switch (NcameraId) {
-//     case 1:
-//         if (valorA1 ==0 && valorA2 ==0){
-//             img.src= "../IMG/0.jpg";
-//         }else if (valorA1 ==0){
-//             img.src= "../IMG/1.jpg";
-//         }else if (valorA2 ==0){
-//             img.src= "../IMG/2.jpg";
-//         }else{
-//             img.src= "../IMG/3.jpg";
-//         }
-//         break;
-//     case 2:
-//         if (valorA1 ==1 && valorA2 ==1){
-//             img.src= "../IMG/4.jpg";
-//         }else if (valorA1 ==1){
-//             img.src= "../IMG/5.jpg";
-//         }else if (valorA2 ==1){
-//             img.src= "../IMG/6.jpg";
-//         }else{
-//             img.src= "../IMG/7.jpg";
-//         }
-//         break;
-//     case 3:
-//         if (valorA1 ==2 && valorA2 ==2){
-//             img.src= "../IMG/8.jpg";
-//         }else if (valorA1 ==2){
-//             img.src= "../IMG/9.jpg";
-//         }else if (valorA2 ==2){
-//             img.src= "../IMG/10.jpg";
-//         }else{
-//             img.src= "../IMG/11.jpg";
-//         }
-//         break;
-//     case 4:
-//         if (valorA1 ==3 && valorA2 ==3){
-//             img.src= "../IMG/12.jpg";
-//         }else if (valorA1 ==3){
-//             img.src= "../IMG/13.jpg";
-//         }else if (valorA2 ==3){
-//             img.src= "../IMG/14.jpg";
-//         }else{
-//             img.src= "../IMG/15.jpg";
-//         }
-//         break;
-//     case 5:
-//         if (valorA1 ==4 && valorA2 ==4){
-//             img.src= "../IMG/16.jpg";
-//         }else if (valorA1 ==4){
-//             img.src= "../IMG/17.jpg";
-//         }else if (valorA2 ==4){
-//             img.src= "../IMG/18.jpg";
-//         }else{
-//             img.src= "../IMG/19.jpg";
-//         }
-//         break;
-//     default:
-//         break;
-// }
-
+document.getElementById(cameraId).style.display = "flex";
+document.getElementById("NM_CAMERA").innerText = "CAMERA-"+cameraId;
+document.getElementById("NM_SALA").innerText = NM_SALA;
 }

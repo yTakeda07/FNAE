@@ -1,4 +1,5 @@
 import { RNG } from '../JS/RNG.js';
+import { SALAS, SALASM } from './salas.js';
 
 window.onload = function(){
 
@@ -17,21 +18,27 @@ const main = `
 </div>
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <img src="../IMG/0.jpg" alt="Camera 1" id="CI1" class="cameras">
-    <img src="../IMG/7.jpg" alt="Camera 2" id="CI2" class="cameras">
-    <img src="../IMG/11.jpg" alt="Camera 3" id="CI3" class="cameras">
-    <img src="../IMG/15.jpg" alt="Camera 4" id="CI4" class="cameras">
-    <img src="../IMG/19.jpg" alt="Camera 5" id="CI5" class="cameras">
-    <p>Camera 1</p>
-      <div id="cameraContainer">
-    
-    <input type="button" value="C1" id="C1" onclick="verificarCamera(1)"><br>
-    <input type="button" value="C2" id="C2" onclick="verificarCamera(2)"><br>
-    <input type="button" value="C3" id="C3" onclick="verificarCamera(3)"><br>
-    <input type="button" value="C4" id="C4" onclick="verificarCamera(4)"><br>
-    <input type="button" value="C5" id="C5" onclick="verificarCamera(5)"><br>
-    <input type="button" value="C6" id="C6" onclick="verificarCamera(6)"><br>
-    <input type="button" value="C7" id="C7" onclick="verificarCamera(7)"><br>
+    <p id="NM_CAMERA">CAMERA-C1</p>
+    <img src="../IMG/0.jpg" alt="" id="${SALAS[1]}" class="cameras">
+    <img src="../IMG/7.jpg" alt="" id="${SALAS[2]}" class="cameras">
+    <img src="../IMG/11.jpg" alt="" id="${SALAS[3]}" class="cameras">
+    <img src="../IMG/15.jpg" alt="" id="${SALAS[4]}" class="cameras">
+    <img src="../IMG/19.jpg" alt="" id="${SALAS[5]}" class="cameras">
+    <img src="../IMG/0.jpg" alt="" id="${SALAS[6]}" class="cameras">
+    <img src="../IMG/0.jpg" alt="" id="${SALAS[7]}" class="cameras">
+    <img src="../IMG/0.jpg" alt="" id="${SALAS[8]}" class="cameras">
+      <div id="cameraContainer1">
+      <p id="NM_SALA">HORTA</p>
+      <div id="cameraIMG">
+    <input type="button" value="${SALAS[1]}" id="${SALASM[1]}" onclick="verificarCamera('${SALAS[1]}')"><br>
+    <input type="button" value="${SALAS[2]}" id="${SALASM[2]}" onclick="verificarCamera('${SALAS[2]}')"><br>
+    <input type="button" value="${SALAS[3]}" id="${SALASM[3]}" onclick="verificarCamera('${SALAS[3]}')"><br>
+    <input type="button" value="${SALAS[4]}" id="${SALASM[4]}" onclick="verificarCamera('${SALAS[4]}')"><br>
+    <input type="button" value="${SALAS[5]}" id="${SALASM[5]}" onclick="verificarCamera('${SALAS[5]}')"><br>
+    <input type="button" value="${SALAS[6]}" id="${SALASM[6]}" onclick="verificarCamera('${SALAS[6]}')"><br>
+    <input type="button" value="${SALAS[7]}" id="${SALASM[7]}" onclick="verificarCamera('${SALAS[7]}')"><br>
+    <input type="button" value="${SALAS[8]}" id="${SALASM[8]}" onclick="verificarCamera('${SALAS[8]}')"><br>
+  </div>
   </div>
   </div>
 </div>
@@ -53,15 +60,17 @@ const ScriptCamera = document.createElement("script");
 ScriptCamera.src = "../JS/abrirCamera.js";
 document.body.appendChild(ScriptCamera);
 
-// const ScriptRNG = document.createElement("script");
-// ScriptCamera.src = "../JS/RNG.js";
-// document.body.appendChild(ScriptRNG);
 // agora eu importo a função do RNG em vez de criar o elemento script.
 RNG();
 
 const verificarCamera = document.createElement("script");
 verificarCamera.src = "../JS/verificarCamera.js";
 document.body.appendChild(verificarCamera);
+
+const mudarAndar = document.createElement("script");
+verificarCamera.src = "../JS/mudarAndar.js";
+document.body.appendChild(mudarAndar);
+
 
 });
 
