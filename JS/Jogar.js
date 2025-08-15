@@ -24,12 +24,19 @@ const main = `
     <img src="../IMG/11.jpg" alt="" id="${SALAS[3]}" class="cameras">
     <img src="../IMG/15.jpg" alt="" id="${SALAS[4]}" class="cameras">
     <img src="../IMG/19.jpg" alt="" id="${SALAS[5]}" class="cameras">
-    <img src="../IMG/0.jpg" alt="" id="${SALAS[6]}" class="cameras">
-    <img src="../IMG/0.jpg" alt="" id="${SALAS[7]}" class="cameras">
-    <img src="../IMG/0.jpg" alt="" id="${SALAS[8]}" class="cameras">
+    <img src="../IMG/3.jpg" alt="" id="${SALAS[6]}" class="cameras">
+    <img src="../IMG/3.jpg" alt="" id="${SALAS[7]}" class="cameras">
+    <img src="../IMG/3.jpg" alt="" id="${SALAS[8]}" class="cameras">
       <div id="cameraContainer1">
-      <p id="NM_SALA">HORTA</p>
-      <div id="cameraIMG">
+      
+      <label class="switch">
+  <input type="checkbox" id="meuSwitch">
+  <span class="slider"></span>
+</label>
+
+  <p id="NM_SALA">HORTA</p>
+  <div id="mudarContainer">
+      <div id="cameraIMG1">
     <input type="button" value="${SALAS[1]}" id="${SALASM[1]}" onclick="verificarCamera('${SALAS[1]}')"><br>
     <input type="button" value="${SALAS[2]}" id="${SALASM[2]}" onclick="verificarCamera('${SALAS[2]}')"><br>
     <input type="button" value="${SALAS[3]}" id="${SALASM[3]}" onclick="verificarCamera('${SALAS[3]}')"><br>
@@ -40,6 +47,9 @@ const main = `
     <input type="button" value="${SALAS[8]}" id="${SALASM[8]}" onclick="verificarCamera('${SALAS[8]}')"><br>
   </div>
   </div>
+  </div>
+
+  
   </div>
 </div>
 `;
@@ -68,7 +78,8 @@ verificarCamera.src = "../JS/verificarCamera.js";
 document.body.appendChild(verificarCamera);
 
 const mudarAndar = document.createElement("script");
-verificarCamera.src = "../JS/mudarAndar.js";
+mudarAndar.src = "../JS/mudarAndar.js";
+mudarAndar.type = "module";
 document.body.appendChild(mudarAndar);
 
 
